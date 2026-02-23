@@ -1,0 +1,16 @@
+make strtoi function
+check within this function for
+duplicate inputs
+non digit inputs
+int max int min checks
+
+strtoi
+take a string + stack as parameter
+converts the string to an integer
+write error to fd 2 if somethings wrong
+return boolean
+
+also make algorithm for 2/3 or 5 inputs
+
+make sure to be able to write a main and input all inputs into the proper stacks and see if maybe making the exercise with linked list would be better
+what to do with argc and argv
