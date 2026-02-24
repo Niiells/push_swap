@@ -12,25 +12,29 @@
 
 #include "push_swap.h"
 
-int *parse(int argc, char **argv)
+int *parse(char **argv, size_t size)
 {
-	int i;
+	size_t i;
 	int *arg;
 
-	arg = malloc(argc * sizeof(int));
+	arg = malloc(size * sizeof(*arg));
 	if (!arg)
 		return (NULL);
 	i = 0;
-	i++;
-	while(i != argc - 1)
+	// i++;
+	while(i < size)
 	{
-		if(!strtoi(argv[argc - i - 1], &arg[i]))
+		if(!strtoi(argv[size - i - 1], &arg[i]))
 			return (free(arg), NULL);
 		i++;
 	}
-	return (&arg);
+	return (arg);
 }
 
+t_stack *init_stack(int *nums, size_t size) 
+{
+
+}
 
 int main(int argc, char **argv)
 {
@@ -40,5 +44,10 @@ int main(int argc, char **argv)
 
 	if (argc < 2)
 		return 1;
-	arg = parse(argc - 1, &argv[1]);
+	arg = parse(&argv[1], argc - 1);
+	if (!arg)
+		return (-1);
+	a = init_stack(arg, argc - 1);
+	free(arg);
+
 }
