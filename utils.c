@@ -16,7 +16,7 @@
 
 
 // bool strtoi()
-bool	ft_atoi2(const char *nptr, int *out)
+bool	strtoi(const char *nptr, int *out)
 {
 	long num;
 	int	sign;

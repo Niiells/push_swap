@@ -21,3 +21,5 @@ typedef struct s_stack
 	int			*stack;
 	size_t		size;
 }				t_stack;
+
+bool	strtoi(const char *nptr, int *out);
