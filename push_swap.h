@@ -23,3 +23,4 @@ typedef struct s_stack
 }				t_stack;
 
 bool	strtoi(const char *nptr, int *out);
+bool	duplicates(int *arg, size_t i, int num);

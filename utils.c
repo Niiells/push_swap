@@ -14,8 +14,6 @@
 #include "libft/libft.h"
 #include <limits.h>
 
-
-// bool strtoi()
 bool	strtoi(const char *nptr, int *out)
 {
 	long num;
@@ -25,12 +23,11 @@ bool	strtoi(const char *nptr, int *out)
 	num = 0;
 	sign = 0;
 	i = 0;
-	if (!ft_isdigit(nptr[i]))
-		return false;
 	sign = (*nptr == '-');
 	if (nptr[i] == '-' || nptr[i] == '+')
-		if (nptr[i] == '-')
-			i++;
+		i++;
+	if (!ft_isdigit(nptr[i]))
+		return false;
 	while (ft_isdigit(nptr[i]))
 		num = num * 10 + nptr[i++] - '0';
 	if (nptr[i])
@@ -38,5 +35,5 @@ bool	strtoi(const char *nptr, int *out)
 	if (sign)
 		num = -num;
 	*out = num;
-	return (num > INT_MIN && num < INT_MAX);
+	return (num >= INT_MIN && num <= INT_MAX);
 }

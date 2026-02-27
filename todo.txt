@@ -13,9 +13,7 @@ return boolean
 also make algorithm for 2/3 or 5 inputs
 
 make sure to be able to write a main and input all inputs into the proper stacks and see if maybe making the exercise with linked list would be better
-what to do with argc and argv
 
-feb-24
 
-write into stack with atoi
-
+27-02
+put all stack functions into stack.c
