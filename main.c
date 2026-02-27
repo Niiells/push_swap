@@ -31,10 +31,10 @@ int *parse(char **argv, size_t size)
 	return (arg);
 }
 
-t_stack *init_stack(int *nums, size_t size) 
-{
-
-}
+// t_stack *init_stack(int *nums, size_t size) 
+// {
+//
+// }
 
 int main(int argc, char **argv)
 {
@@ -47,7 +47,6 @@ int main(int argc, char **argv)
 	arg = parse(&argv[1], argc - 1);
 	if (!arg)
 		return (-1);
-	a = init_stack(arg, argc - 1);
+	// a = init_stack(arg, argc - 1);
 	free(arg);
-
 }

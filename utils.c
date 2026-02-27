@@ -21,19 +21,12 @@ bool	strtoi(const char *nptr, int *out)
 	long num;
 	int	sign;
 	int	i;
-	int n;
 
 	num = 0;
 	sign = 0;
 	i = 0;
-	n = 0;
-	if(ft_strchr(nptr, 45))
-		n++;
-	if (!ft_isdigit(nptr[n]))
+	if (!ft_isdigit(nptr[i]))
 		return false;
-	// while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-	// 	i++;
-	//
 	sign = (*nptr == '-');
 	if (nptr[i] == '-' || nptr[i] == '+')
 		if (nptr[i] == '-')
@@ -46,7 +39,4 @@ bool	strtoi(const char *nptr, int *out)
 		num = -num;
 	*out = num;
 	return (num > INT_MIN && num < INT_MAX);
-	// if (! (sign % 2))
-	// 	return (num);
-	// return (-num);
 }
